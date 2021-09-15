@@ -3,7 +3,7 @@ const searchInput = document.getElementById('search-field');
 
 searchInput.addEventListener("keypress", function (event) {
     // event.preventDefault();
-    if (event.keyCode == 13)
+    if (event.key == 'Enter')
         searchBtn.click();
 });
 
@@ -32,7 +32,7 @@ const displaySearchResult = (meals) => {
     const searchResult = document.getElementById('search-result');
     searchResult.textContent = ""
     meals.forEach(meal => {
-        console.log(meal)
+        // console.log(meal)
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
